@@ -2,6 +2,10 @@
 
 This Laravel >= 5.5 package allows you to silently authenticate users.
 
+## Overview
+
+I created this package for personal usage. It's based on insights from other open source packages and online blog posts.
+
 ## Documentation
 
 In this documentation, you will find some helpful information about the use of this Laravel package.
