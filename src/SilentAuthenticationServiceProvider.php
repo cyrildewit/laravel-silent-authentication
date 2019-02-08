@@ -11,9 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace CyrildeWit\EloquentViewable;
+namespace CyrildeWit\LaravelSilentAuthentication;
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
+use CyrildeWit\LaravelSilentAuthentication\Guards\SessionGuard;
 
 class SilentAuthenticationServiceProvider extends ServiceProvider
 {
@@ -55,7 +57,7 @@ class SilentAuthenticationServiceProvider extends ServiceProvider
      * @param   void
      * @return  void
      */
-    protected function registerAuthDriver()
+    protected function registerSessionDriver()
     {
         $auth = $this->app['auth'];
 

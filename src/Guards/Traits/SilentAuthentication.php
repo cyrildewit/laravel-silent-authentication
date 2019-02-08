@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace CyrildeWit\LaravelSilentAuthentication\Traits;
+namespace CyrildeWit\LaravelSilentAuthentication\Guards\Traits;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 
