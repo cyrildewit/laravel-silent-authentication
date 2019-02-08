@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace CyrildeWit\LaravelSilentAuthentication\Guards;
 
 use Illuminate\Auth\SessionGuard as BaseSessionGuard;
+use CyrildeWit\LaravelSilentAuthentication\Guards\Traits\SilentAuthentication;
 
 class SessionGuard extends BaseSessionGuard
 {
