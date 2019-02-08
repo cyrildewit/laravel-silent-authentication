@@ -11,12 +11,11 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace CyrildeWit\LaravelSilentAuthentication;
+namespace CyrildeWit\LaravelSilentAuthentication\Traits;
 
 use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Auth\SessionGuard as BaseSessionGuard;
 
-class SessionGuard extends BaseSessionGuard
+trait SilentAuthentication
 {
     /**
      * Log a user into the application without firing login specific events.
