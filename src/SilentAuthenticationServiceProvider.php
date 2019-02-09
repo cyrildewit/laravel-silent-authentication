@@ -53,8 +53,8 @@ class SilentAuthenticationServiceProvider extends ServiceProvider
     }
 
     /**
-     * Register the custom session driver which will
-     * @param   void
+     * Register the custom session driver with silent authentication.
+     *
      * @return  void
      */
     protected function registerSessionDriver()
