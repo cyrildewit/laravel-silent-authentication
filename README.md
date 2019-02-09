@@ -16,7 +16,8 @@ In this documentation, you will find some helpful information about the use of t
     * [Requirements](#requirements)
     * [Installation](#installation)
 2. [Usage](#usage)
-    * [](#preparing-your-model)
+    * [Default setup](#default-setup)
+    * [SilentAuthentication trait](#preparing-your-model)
 
 ## Getting Started
 
@@ -60,3 +61,31 @@ If you prefer to register packages manually, you can add the following provider 
 ```
 
 ## Usage
+
+### Default setup
+
+This package will overwrite the default `SessionGuard` by default. The customized session guard uses the `SilentAuthentication` trait which will allow you silently authenticate users.
+
+If you're not interesting in this default or if it's breaking your application, you can disable it in the config file.
+
+### SilentAuthentication trait
+
+If you're already overwriting the default `SessionGuard` in your application, you can simply implement the `SilentAuthentication` trait.
+
+```php
+use Illuminate\Auth\SessionGuard as BaseSessionGuard;
+use CyrildeWit\LaravelSilentAuthentication\Guards\Traits\SilentAuthentication;
+
+class SessionGuard extends BaseSessionGuard
+{
+    use SilentAuthentication;
+}
+```
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG-2.0.md) for more information on what has changed recently.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
