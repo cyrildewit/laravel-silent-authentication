@@ -47,7 +47,7 @@ class SilentAuthenticationServiceProvider extends ServiceProvider
             'silent-authentication'
         );
 
-        if (config('silent-authentication.enabled')) {
+        if (config('silent-authentication.default_session_guard.enabled')) {
             $this->registerSessionDriver();
         }
     }
@@ -61,7 +61,7 @@ class SilentAuthenticationServiceProvider extends ServiceProvider
     {
         $auth = $this->app['auth'];
 
-        $providerName = config('silent-authentication.provider_name');
+        $providerName = config('silent-authentication.default_session_guard.provider_name');
 
         $auth->extend($providerName, function (Application $app, $name, array $config) use ($auth) {
             $provider = $auth->createUserProvider($config['provider']);

@@ -2,8 +2,11 @@
 
 return [
 
-    'enabled' => true,
+    'default_session_guard' => [
 
-    'provider_name' => 'session',
+        'enabled' => true,
+        'provider_name' => 'session',
+
+    ],
 
 ];
