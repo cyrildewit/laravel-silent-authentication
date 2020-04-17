@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Eloquent Viewable package.
+ * This file is part of the Laravel Silent Authentication package.
  *
  * (c) Cyril de Wit <github@cyrildewit.nl>
  *
